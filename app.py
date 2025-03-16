@@ -17,5 +17,9 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
-if __name__ == '__main__':
-    app.run(debug=True)  # Ensure this runs before sending a request
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render provides the PORT dynamically
+    app.run(host="0.0.0.0", port=port, debug=True)
+  # Ensure this runs before sending a request
