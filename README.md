@@ -1,0 +1,1 @@
+# energy_consumption_prediction_model_ridge_regression
